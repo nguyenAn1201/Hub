@@ -21,7 +21,6 @@ class WeatherCard extends Component {
         const reqWeatherSvg = require.context('../assets', true, /\.svg$/);
         const allSvgFilePaths = reqWeatherSvg.keys(); 
         const weatherSvgArray = allSvgFilePaths.map(path => reqWeatherSvg(path));
-        console.log(allSvgFilePaths);
 
         var date = new Date();
         var dateHour = date.getHours();
@@ -29,9 +28,7 @@ class WeatherCard extends Component {
         axios.get('http://localhost:5000/')
           .then((res) => {
               //TODO: import the icon svg and write if else to display the right icon.
-              let weatherId = res.data.weather[0].id;
-              console.log(`${weatherId} time: ${dateHour}`)
-              
+              let weatherId = res.data.weather[0].id;              
               if (weatherId <= 232){
                 this.setState({ weatherIcon: weatherSvgArray[11] }); //thunderstorm
               } else if (weatherId >= 300 && weatherId <= 321) {

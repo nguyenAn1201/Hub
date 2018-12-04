@@ -1,0 +1,39 @@
+.reddit_card {
+    background-color:whitesmoke;
+    //height: 280px;
+    width: 350px;
+    margin: 15px 5px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    p, a {
+        font-size: 1em;
+        margin: 5px;
+    }
+    
+
+    h1, h2, h3, h4, h5, h6 {
+        margin:5px;
+    }
+    img {
+        max-width: 350px;
+        margin: 0;
+    }
+
+    .reddit_card_content {
+        p {
+            font-size: 0.9em;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+        a {
+            font-size: 0.9em;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.video {
+    max-width: 100%;
+}
